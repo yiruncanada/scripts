@@ -8,9 +8,9 @@ then
 	exit 1
 fi
 
-if  ! ls "$path" > commands_stdout.log 2> /dev/null
+if [[ -d "$path" ]]
 then
-	echo "Le dossier n'existe pas."
+	echo "Le path ${path} no correspond pas a un dossier."
 	exit 1
 fi
 
