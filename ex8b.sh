@@ -32,7 +32,7 @@ then
 fi
 
 # Verify le source directory contians at least one file
-if [[ -z $(ls -FR  "$source" | grep -v "/$") ]]
+if [[ -z $(ls -FR  "$source" | grep -v "[:/]$") ]]
 then
 	echo "Le dossier source et ses sous-dossiers doivent contenir au moins un fichier."
 	exit 1
